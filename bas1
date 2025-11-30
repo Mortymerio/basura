@@ -1,1 +1,1 @@
-sudo pkill -9 gkr-pam && sudo systemctl mask gnome-keyring-daemon.service && sudo mkdir -p /var/run/utmp && sudo touch /var/run/utmp && sudo systemctl restart lightdm
+killall sxhkd 2>/dev/null; sxhkd & sleep 1 && sed -i '1i sxhkd &' ~/.config/bspwm/bspwmrc 2>/dev/null || sed -i '1i sxhkd &' ~/.config/bspwm/bspwmrc && bspc wm -r
